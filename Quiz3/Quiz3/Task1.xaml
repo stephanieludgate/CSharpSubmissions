@@ -1,0 +1,30 @@
+﻿<Window x:Class="Quiz3.Task1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Task1" Height="300" Width="350" Background="LightBlue">
+    <Grid Margin="20">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Label Content="ID : " Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" FontWeight="Bold"/>
+        <TextBlock x:Name="txtId" Text="{Binding}" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center"/>
+        <Label Content="First Name : " Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" FontWeight="Bold"/>
+        <TextBox x:Name="txtFirst" Grid.Row="1" Grid.Column="1" Height="30" VerticalContentAlignment="Center"/>
+        <Label Content="Last Name : " Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" FontWeight="Bold"/>
+        <TextBox x:Name="txtLast" Grid.Row="2" Grid.Column="1" Height="30" VerticalContentAlignment="Center"/>
+        <Label Content="Registered : " Grid.Row="3" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" FontWeight="Bold"/>
+        <CheckBox x:Name="chkRegistered" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center"/>
+        <Button x:Name="btnAdd" Content="Save" Click="btnAdd_Click" Grid.Row="4" Grid.ColumnSpan="2" Width="100"/>
+    </Grid>
+</Window>
